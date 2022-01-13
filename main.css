@@ -88,3 +88,23 @@ body::after {
     position: relative;
     }
 
+.billing-bot{
+    background-color: red;
+    color: azure;
+}
+
+.btn-danger:hover{
+    background-color:black !important;
+}
+
+.shepherd-header{
+    background-color: red !important;
+}
+
+.shepherd-header h3{
+    color: azure !important;
+}
+
+.shepherd-header span{
+    color: azure !important;
+}
