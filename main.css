@@ -108,3 +108,7 @@ body::after {
 .shepherd-header span{
     color: azure !important;
 }
+
+.shepherd-arrow {
+    display: none !important;
+}

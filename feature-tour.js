@@ -31,11 +31,11 @@ const tour = new Shepherd.Tour({
           }
         ],
         id: 'creating',
-        modalOverlayOpeningRadius: 5, //le pone border radius al spotlight que tienen en el overlay
+        modalOverlayOpeningRadius: 2, //le pone border radius al spotlight que tienen en el overlay
       });
 
       tour.addStep({
-          tittle: 'Step 2', //titulo
+          title: 'Step 2', //titulo
           text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia error, temporibus nostrum cupiditate nemo, praesentium dolorem fugiat quasi recusandae libero est vel. Officia molestiae modi illum exercitationem iure ipsum sequi?',
           attachTo:{ //Attacheas el globo al element: '.nombre-de-class' y on: 'posición'
               element: '.second',
@@ -61,7 +61,38 @@ const tour = new Shepherd.Tour({
 
             }
           ],
-      })
+      });
+
+      tour.addStep({
+        title: 'Step 3', //titulo
+        text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia error, temporibus nostrum cupiditate nemo, praesentium dolorem fugiat quasi recusandae libero est vel. Officia molestiae modi illum exercitationem iure ipsum sequi?',
+        attachTo:{ //Attacheas el globo al element: '.nombre-de-class' y on: 'posición'
+            element: '.third',
+            on: 'bottom-start'
+        },
+        cancelIcon:{ //Tener el icono de la X para cerrar
+            enabled: false,
+        },
+        buttons: [
+          {
+            action() {
+              return this.back();
+            },
+            classes: 'btn-danger',
+            text: 'Back'
+          },
+          {
+            action() {
+              return this.next();
+            },
+            classes: 'btn-danger',
+            text: 'Next',
+
+          },
+        ],
+        modalOverlayOpeningRadius: 2, //le pone border radius al spotlight que tienen en el overlay
+    });
+
       
       tour.start();
 
